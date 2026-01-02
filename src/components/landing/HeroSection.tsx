@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Lock } from "lucide-react";
-import heroBanner from "@/assets/hero-banner.jpg";
+import heroBanner from "@/assets/hero-banner.png";
 
 const CHECKOUT_URL = "https://pay.hotmart.com/M102774668D?off=3cj9etar&checkoutMode=10";
 
 const HeroSection = () => {
   return (
     <header className="relative">
-      {/* Hero banner - full width at the very top */}
-      <div className="w-full">
+      {/* Hero banner - transparent PNG over galaxy background */}
+      <div className="w-full flex justify-center pt-8 md:pt-12">
         <img
           src={heroBanner}
           alt="Guia de Códigos de Grabovoi para Manifestação Quântica - Edson Burger"
-          className="w-full h-auto object-cover"
+          className="w-full max-w-4xl h-auto object-contain px-4"
           loading="eager"
         />
       </div>
