@@ -2,7 +2,7 @@ import { AlertCircle, ArrowRight, CheckCircle } from "lucide-react";
 
 const ProblemSection = () => {
   return (
-    <section className="pt-16 md:pt-24 pb-0">
+    <section className="py-16 md:py-24">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold">
