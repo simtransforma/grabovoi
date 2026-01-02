@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <header className="relative">
       {/* Hero banner - transparent PNG over galaxy background */}
-      <div className="w-full flex justify-center pt-8 md:pt-12">
+      <div className="w-full flex justify-center -mb-8 md:-mb-16">
         <img
           src={heroBanner}
           alt="Guia de Códigos de Grabovoi para Manifestação Quântica - Edson Burger"
