@@ -1,22 +1,12 @@
-import authorPhoto from "@/assets/author-photo.jpg";
+import heroEdson from "@/assets/hero-edson.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center">
-      {/* Background with author photo */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={authorPhoto} 
-          alt="Edson Burger com o Guia de Códigos de Grabovoi"
-          className="w-full h-full object-cover object-top"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-      </div>
-      
+    <section className="relative min-h-screen">
       {/* Content */}
-      <div className="container relative z-10 py-20 md:py-32">
-        <div className="max-w-2xl">
+      <div className="container py-12 md:py-20">
+        {/* Text content */}
+        <div className="max-w-2xl mb-8 md:mb-12">
           <p className="text-primary font-medium mb-6 text-sm md:text-base tracking-wide">
             Para quem já conhece os códigos, mas ainda trava na hora de usar
           </p>
@@ -39,13 +29,22 @@ const HeroSection = () => {
               Não precisa ser assim.
             </p>
           </div>
-          
-          <div className="mt-10 flex items-center gap-4">
-            <div className="w-12 h-px bg-primary/50" />
-            <span className="text-sm text-muted-foreground">
-              Role para descobrir um caminho mais simples
-            </span>
-          </div>
+        </div>
+        
+        {/* Hero image - full image display */}
+        <div className="relative flex justify-center md:justify-end">
+          <img 
+            src={heroEdson} 
+            alt="Edson Burger com o Guia de Códigos de Grabovoi"
+            className="w-full max-w-4xl h-auto object-contain rounded-lg"
+          />
+        </div>
+        
+        <div className="mt-8 flex items-center gap-4">
+          <div className="w-12 h-px bg-primary/50" />
+          <span className="text-sm text-muted-foreground">
+            Role para descobrir um caminho mais simples
+          </span>
         </div>
       </div>
     </section>
