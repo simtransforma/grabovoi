@@ -1,12 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/landing/Header";
+import HeroSection from "@/components/landing/HeroSection";
+import ProblemSection from "@/components/landing/ProblemSection";
+import ForWhoSection from "@/components/landing/ForWhoSection";
+import DeliverablesSection from "@/components/landing/DeliverablesSection";
+import MethodSection from "@/components/landing/MethodSection";
+import ContentSection from "@/components/landing/ContentSection";
+import PriceSection from "@/components/landing/PriceSection";
+import StackSection from "@/components/landing/StackSection";
+import FAQSection from "@/components/landing/FAQSection";
+import AboutSection from "@/components/landing/AboutSection";
+import Footer from "@/components/landing/Footer";
+import StickyFooter from "@/components/landing/StickyFooter";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <HeroSection />
+        <ProblemSection />
+        <ForWhoSection />
+        <DeliverablesSection />
+        <MethodSection />
+        <ContentSection />
+        <PriceSection />
+        <StackSection />
+        <FAQSection />
+        <AboutSection />
+      </main>
+      <Footer />
+      <StickyFooter />
     </div>
   );
 };
