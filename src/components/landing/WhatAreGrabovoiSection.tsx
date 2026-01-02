@@ -1,4 +1,5 @@
 import { Target, Repeat, ClipboardCheck, Hash } from "lucide-react";
+import heroTransition from "@/assets/hero-transition.png";
 
 const steps = [
   {
@@ -21,7 +22,16 @@ const steps = [
 
 const WhatAreGrabovoiSection = () => {
   return (
-    <section className="py-16 md:py-24">
+    <section className="pt-0 pb-16 md:pb-24">
+      {/* Imagem de transição - conecta com a seção anterior */}
+      <div className="w-full flex justify-center mb-12 md:mb-16">
+        <img 
+          src={heroTransition} 
+          alt="Edson Burger com o Guia de Códigos de Grabovoi" 
+          className="w-full max-w-4xl h-auto px-4"
+        />
+      </div>
+      
       <div className="container">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
