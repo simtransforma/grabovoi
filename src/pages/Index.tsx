@@ -1,13 +1,12 @@
 import HeroSection from "@/components/landing/HeroSection";
 import ProblemSection from "@/components/landing/ProblemSection";
-import ForWhoSection from "@/components/landing/ForWhoSection";
+import WhatAreGrabovoiSection from "@/components/landing/WhatAreGrabovoiSection";
+import PresentingSection from "@/components/landing/PresentingSection";
 import DeliverablesSection from "@/components/landing/DeliverablesSection";
-import MethodSection from "@/components/landing/MethodSection";
-import ContentSection from "@/components/landing/ContentSection";
-import PriceSection from "@/components/landing/PriceSection";
-import StackSection from "@/components/landing/StackSection";
+import ValueSection from "@/components/landing/ValueSection";
+import ForWhoSection from "@/components/landing/ForWhoSection";
 import FAQSection from "@/components/landing/FAQSection";
-import AboutSection from "@/components/landing/AboutSection";
+import FinalOfferSection from "@/components/landing/FinalOfferSection";
 import Footer from "@/components/landing/Footer";
 import StickyFooter from "@/components/landing/StickyFooter";
 
@@ -17,14 +16,13 @@ const Index = () => {
       <main>
         <HeroSection />
         <ProblemSection />
-        <ForWhoSection />
+        <WhatAreGrabovoiSection />
+        <PresentingSection />
         <DeliverablesSection />
-        <MethodSection />
-        <ContentSection />
-        <PriceSection />
-        <StackSection />
+        <ValueSection />
+        <ForWhoSection />
         <FAQSection />
-        <AboutSection />
+        <FinalOfferSection />
       </main>
       <Footer />
       <StickyFooter />

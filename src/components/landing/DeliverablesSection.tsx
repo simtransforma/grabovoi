@@ -1,87 +1,178 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Video, Users, Check } from "lucide-react";
-import ebookMockup from "@/assets/ebook-mockup-new.png";
+import {
+  BookOpen,
+  Video,
+  Users,
+  Check,
+  Wrench,
+  Heart,
+  DollarSign,
+  Home,
+  Briefcase,
+  Smile,
+  BookMarked,
+} from "lucide-react";
 
-const deliverables = [
-  {
-    icon: BookOpen,
-    title: 'Ebook/PDF "Guia de Códigos de Grabovoi para Manifestação Quântica"',
-    features: [
-      "Biblioteca completa e organizada",
-      "Categorias para consultar rápido",
-      "Técnicas de aplicação explicadas",
-    ],
-  },
-  {
-    icon: Video,
-    title: "Plataforma exclusiva com videoaulas (passo a passo)",
-    features: [
-      "Como escolher o código certo",
-      "Como aplicar (na prática) sem complicar",
-      "Rotina simples para manter consistência",
-      "Erros comuns que fazem a pessoa achar que 'não funciona'",
-    ],
-  },
-  {
-    icon: Users,
-    title: "Mentor online + acompanhamento",
-    features: [
-      "Tire dúvidas quando travar",
-      "Receba orientação para ajustar sua aplicação",
-      "Acompanhamento para manter constância",
-    ],
-  },
+const categories = [
+  { icon: Heart, label: "Amor & Relacionamentos (autoconfiança, conexão, harmonia, comunicação)" },
+  { icon: DollarSign, label: "Abundância Financeira & Dinheiro (prosperidade, fluxo, oportunidades, segurança)" },
+  { icon: Home, label: "Família & Harmonia (paz no lar, resolução de conflitos, união)" },
+  { icon: Briefcase, label: "Vida Profissional & Negócios (produtividade, organização, resultados, vendas, criatividade)" },
+  { icon: Smile, label: "Emoções & Bem‑Estar (calma, autoestima, redução do estresse, clareza)" },
+  { icon: BookMarked, label: "Estudos & Aprendizado (foco, memória, concentração)" },
+];
+
+const videoFeatures = [
+  "como escolher o código certo",
+  "como aplicar no dia a dia (sem complicação)",
+  "como montar sua rotina de 7/14/21 dias",
+  "como registrar resultados e ajustar",
+  "como não se sabotar com ansiedade e desistir no meio",
+];
+
+const mentorFeatures = [
+  "tirar dúvidas que surgirem;",
+  "corrigir aplicação (quando necessário);",
+  "orientar sua rotina;",
+  "ajudar você a manter constância.",
 ];
 
 const DeliverablesSection = () => {
   return (
     <section className="py-16 md:py-24">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
-            O que você recebe{" "}
-            <span className="text-gradient-gold">assim que entra</span>
-          </h2>
-        </div>
-        
-        {/* Ebook Mockup Highlight */}
-        <div className="flex justify-center mb-12">
-          <div className="relative">
-            <img 
-              src={ebookMockup} 
-              alt="Guia de Códigos de Grabovoi - Ebook"
-              className="w-64 md:w-80 drop-shadow-2xl"
-            />
-            <div className="absolute -inset-4 bg-primary/10 rounded-full blur-3xl -z-10" />
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+              O que você recebe{" "}
+              <span className="text-gradient-gold">ao entrar hoje</span>
+            </h2>
           </div>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-6">
-          {deliverables.map((item, index) => (
-            <Card 
-              key={index}
-              className="bg-card border-border/50 hover:border-primary/30 transition-all hover:shadow-lg hover:shadow-primary/10"
-            >
-              <CardHeader className="text-center pb-4">
-                <div className="mx-auto w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mb-4">
-                  <item.icon className="h-8 w-8 text-primary" />
+
+          {/* 1) O Guia Completo */}
+          <Card className="mb-8 bg-card/80 backdrop-blur-md border-border/50">
+            <CardHeader>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                  <BookOpen className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="font-playfair text-lg leading-tight">
-                  {item.title}
+                <CardTitle className="font-playfair text-xl">
+                  1) O Guia Completo (PDF) – "o manual da transformação"
                 </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {item.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-2">
-                      <Check className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p className="text-foreground/90 mb-4">
+                Você vai encontrar códigos organizados por áreas, como:
+              </p>
+              <ul className="grid md:grid-cols-2 gap-3 mb-4">
+                {categories.map((cat, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <cat.icon className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                    <span className="text-sm text-foreground/85">{cat.label}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-sm text-foreground/80 mb-4">
+                e outras categorias para você aplicar de forma prática no dia a dia.
+              </p>
+              <p className="text-sm text-primary font-medium">
+                📌 O diferencial aqui é organização: você abre, encontra a área e aplica.
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* 2) Caixa de Ferramentas */}
+          <Card className="mb-8 bg-card/80 backdrop-blur-md border-border/50">
+            <CardHeader>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Wrench className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="font-playfair text-xl">
+                  2) Uma "Caixa de Ferramentas" para usar todos os dias
+                </CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p className="text-foreground/90 mb-4">
+                Sabe quando você quer começar, mas não sabe por onde?
+              </p>
+              <p className="text-foreground/90 mb-4">
+                A caixa de ferramentas te dá um caminho: códigos "base" para você usar como rotina, especialmente no início.
+              </p>
+              <p className="text-primary font-medium">
+                É o tipo de coisa que tira você do zero e coloca você em movimento.
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* 3) Plataforma com Videoaulas */}
+          <Card className="mb-8 bg-card/80 backdrop-blur-md border-border/50">
+            <CardHeader>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Video className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="font-playfair text-xl">
+                  3) Acesso a uma Plataforma Exclusiva com Videoaulas (passo a passo)
+                </CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p className="text-foreground/90 mb-4">
+                Aqui está o que a maioria dos materiais <span className="font-semibold">NÃO tem</span> — e que muda tudo:
+              </p>
+              <p className="text-foreground/85 mb-4">
+                Em vez de você ficar lendo e pensando "tá, mas como eu aplico isso na prática?"…
+                você entra na plataforma e assiste às aulas mostrando:
+              </p>
+              <ul className="space-y-2 mb-4">
+                {videoFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <Check className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                    <span className="text-foreground/85">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-primary font-medium">
+                Ou seja: você tem o caminho guiado, em vídeo.
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* 4) Mentoria Online */}
+          <Card className="bg-card/80 backdrop-blur-md border-primary/30">
+            <CardHeader>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Users className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="font-playfair text-xl">
+                  4) Mentoria Online + Acompanhamento (pra você não travar)
+                </CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p className="text-foreground/90 mb-4 font-semibold">
+                Você não vai ficar sozinha(o).
+              </p>
+              <p className="text-foreground/85 mb-4">
+                Na plataforma, você terá acesso a um mentor online para:
+              </p>
+              <ul className="space-y-2 mb-4">
+                {mentorFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <Check className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                    <span className="text-foreground/85">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-primary font-medium">
+                Isso é o que transforma um "PDF parado" em uma experiência acompanhada.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
