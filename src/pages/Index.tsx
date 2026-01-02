@@ -1,4 +1,3 @@
-import Header from "@/components/landing/Header";
 import HeroSection from "@/components/landing/HeroSection";
 import ProblemSection from "@/components/landing/ProblemSection";
 import ForWhoSection from "@/components/landing/ForWhoSection";
@@ -15,7 +14,6 @@ import StickyFooter from "@/components/landing/StickyFooter";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
       <main>
         <HeroSection />
         <ProblemSection />

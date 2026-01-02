@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, Video, Users, Check } from "lucide-react";
+import ebookMockup from "@/assets/ebook-mockup.png";
 
 const deliverables = [
   {
@@ -41,6 +42,18 @@ const DeliverablesSection = () => {
             O que você recebe{" "}
             <span className="text-gradient-gold">assim que entra</span>
           </h2>
+        </div>
+        
+        {/* Ebook Mockup Highlight */}
+        <div className="flex justify-center mb-12">
+          <div className="relative">
+            <img 
+              src={ebookMockup} 
+              alt="Guia de Códigos de Grabovoi - Ebook"
+              className="w-64 md:w-80 drop-shadow-2xl"
+            />
+            <div className="absolute -inset-4 bg-primary/10 rounded-full blur-3xl -z-10" />
+          </div>
         </div>
         
         <div className="grid md:grid-cols-3 gap-6">
