@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, Video, Users, Check } from "lucide-react";
-import ebookMockup from "@/assets/ebook-mockup.png";
+import ebookMockup from "@/assets/ebook-mockup-new.png";
 
 const deliverables = [
   {
