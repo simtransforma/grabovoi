@@ -4,7 +4,7 @@ import authorPhoto from "@/assets/author-photo.jpg";
 
 const AboutSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-secondary/30">
+    <section className="py-16 md:py-24">
       <div className="container">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">

@@ -11,7 +11,7 @@ import { Shield, Lock } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-12 pb-32 md:pb-24 bg-background border-t border-border/50">
+    <footer className="py-12 pb-32 md:pb-24 bg-background/40 backdrop-blur-md border-t border-border/50">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           {/* Trust badges */}
