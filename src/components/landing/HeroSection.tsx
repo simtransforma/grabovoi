@@ -1,11 +1,20 @@
-import heroEdson from "@/assets/hero-edson.jpg";
+import heroBanner from "@/assets/hero-banner.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative">
-      {/* Text content */}
+      {/* Hero banner - full width at the very top */}
+      <div className="w-full">
+        <img 
+          src={heroBanner} 
+          alt="Guia de Códigos de Grabovoi para Manifestação Quântica - Edson Burger"
+          className="w-full h-auto object-cover"
+        />
+      </div>
+      
+      {/* Text content - centered */}
       <div className="container py-12 md:py-20">
-        <div className="max-w-2xl">
+        <div className="max-w-3xl mx-auto text-center">
           <p className="text-primary font-medium mb-6 text-sm md:text-base tracking-wide">
             Para quem já conhece os códigos, mas ainda trava na hora de usar
           </p>
@@ -29,15 +38,6 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
-      </div>
-      
-      {/* Hero image - full width, edge to edge */}
-      <div className="w-full">
-        <img 
-          src={heroEdson} 
-          alt="Edson Burger com o Guia de Códigos de Grabovoi"
-          className="w-full h-auto object-cover"
-        />
       </div>
     </section>
   );
