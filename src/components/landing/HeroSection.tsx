@@ -1,20 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Lock } from "lucide-react";
 import heroBanner from "@/assets/hero-banner.png";
-
 const CHECKOUT_URL = "https://pay.hotmart.com/M102774668D?off=3cj9etar&checkoutMode=10";
-
 const HeroSection = () => {
-  return (
-    <header className="relative">
+  return <header className="relative">
       {/* Hero banner - transparent PNG over galaxy background */}
       <div className="w-full flex justify-center -mb-8 md:-mb-16">
-        <img
-          src={heroBanner}
-          alt="Guia de Códigos de Grabovoi para Manifestação Quântica - Edson Burger"
-          className="w-full max-w-4xl h-auto object-contain px-4"
-          loading="eager"
-        />
+        
       </div>
 
       {/* Text content - centered */}
@@ -62,17 +54,8 @@ const HeroSection = () => {
           </div>
 
           <div className="mt-8 flex justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-gradient-gold hover:opacity-90 text-primary-foreground font-bold shadow-gold"
-            >
-              <a
-                href={CHECKOUT_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Quero garantir meu acesso por R$67 agora"
-              >
+            <Button asChild size="lg" className="bg-gradient-gold hover:opacity-90 text-primary-foreground font-bold shadow-gold">
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" aria-label="Quero garantir meu acesso por R$67 agora">
                 QUERO GARANTIR MEU ACESSO POR R$67 AGORA
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
@@ -84,8 +67,6 @@ const HeroSection = () => {
           </p>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default HeroSection;
