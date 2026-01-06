@@ -55,8 +55,9 @@ const HeroSection = () => {
 
           <div className="mt-8 flex justify-center">
             <Button asChild size="lg" className="bg-gradient-gold hover:opacity-90 text-primary-foreground font-bold shadow-gold">
-              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" aria-label="Quero garantir meu acesso por R$67 agora">
-                QUERO GARANTIR MEU ACESSO POR R$67 AGORA
+              <a id="hero-cta" href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" aria-label="Quero garantir meu acesso por R$67 agora">
+                <span className="hidden md:inline">QUERO GARANTIR MEU ACESSO POR R$67 AGORA</span>
+                <span className="md:hidden">GARANTIR ACESSO</span>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
