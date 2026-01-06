@@ -48,7 +48,8 @@ const FinalOfferSection = () => {
                 rel="noopener noreferrer"
                 aria-label="Garantir R$67 e começar agora"
               >
-                GARANTIR R$67 E COMEÇAR AGORA
+                <span className="hidden md:inline">GARANTIR R$67 E COMEÇAR AGORA</span>
+                <span className="md:hidden">GARANTIR ACESSO</span>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
