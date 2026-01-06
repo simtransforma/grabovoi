@@ -19,7 +19,7 @@ const HeroSection = () => {
 
           <p className="mt-5 text-base md:text-lg text-foreground/85 leading-relaxed">
             Um método simples e guiado para aplicar os Códigos de Grabovoi com intenção, clareza e direção — sem rituais complicados,
-            sem "achismo" e com acompanhamento de um mentor online.
+            sem "achismo" e com acesso a uma plataforma com 1 vídeo completo e explicativo de como usar o guia, além de suporte para dúvidas.
           </p>
 
           <ul className="mt-7 grid gap-3 text-left max-w-2xl mx-auto">
@@ -33,13 +33,13 @@ const HeroSection = () => {
               <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/20">
                 <Check className="h-4 w-4 text-primary" />
               </span>
-              <span className="text-foreground/90">Plataforma exclusiva com videoaulas</span>
+              <span className="text-foreground/90">Plataforma exclusiva com 1 vídeo completo e explicativo</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/20">
                 <Check className="h-4 w-4 text-primary" />
               </span>
-              <span className="text-foreground/90">Mentoria online para dúvidas e acompanhamento</span>
+              <span className="text-foreground/90">Suporte para dúvidas</span>
             </li>
           </ul>
 
@@ -65,7 +65,7 @@ const HeroSection = () => {
           </div>
 
           <p className="mt-3 text-xs text-muted-foreground">
-            Conteúdo digital • Compra segura • Suporte + mentoria na plataforma
+            Conteúdo digital • Compra segura • Suporte
           </p>
         </div>
       </div>

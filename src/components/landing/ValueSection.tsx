@@ -6,14 +6,14 @@ import { useCheckoutUrl } from "@/hooks/use-checkout-url";
 const benefits = [
   "um método organizado por áreas da vida,",
   "uma rotina que cabe no seu dia,",
-  "aulas em vídeo pra aplicar certo,",
-  "e suporte humano pra não desistir.",
+  "um vídeo completo e explicativo pra aplicar do jeito certo,",
+  "suporte para dúvidas pra você não travar no começo.",
 ];
 
 const stackItems = [
   "Guia completo + organização por áreas",
-  "Plataforma com aulas em vídeo",
-  "Mentoria online + acompanhamento",
+  "Guia Prático (consulta rápida)",
+  "Plataforma com 1 vídeo completo e explicativo + suporte para dúvidas",
 ];
 
 const ValueSection = () => {
