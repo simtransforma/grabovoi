@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Lock } from "lucide-react";
 import heroBanner from "@/assets/hero-banner.png";
-const CHECKOUT_URL = "https://pay.hotmart.com/M102774668D?off=3cj9etar&checkoutMode=10";
+import { useCheckoutUrl } from "@/hooks/use-checkout-url";
 const HeroSection = () => {
+  const { checkoutUrl } = useCheckoutUrl();
   return <header className="relative">
       {/* Hero banner - transparent PNG over galaxy background */}
       <div className="w-full flex justify-center -mb-8 md:-mb-16">
@@ -55,7 +56,7 @@ const HeroSection = () => {
 
           <div className="mt-8 flex justify-center">
             <Button asChild size="lg" className="bg-gradient-gold hover:opacity-90 text-primary-foreground font-bold shadow-gold">
-              <a id="hero-cta" href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" aria-label="Quero garantir meu acesso por R$27,90 agora">
+              <a id="hero-cta" href={checkoutUrl} target="_blank" rel="noopener noreferrer" aria-label="Quero garantir meu acesso por R$27,90 agora">
                 <span className="hidden md:inline">QUERO GARANTIR MEU ACESSO POR R$27,90 AGORA</span>
                 <span className="md:hidden">GARANTIR ACESSO</span>
                 <ArrowRight className="ml-2 h-5 w-5" />

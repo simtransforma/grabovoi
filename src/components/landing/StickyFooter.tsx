@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock } from "lucide-react";
 import { useState, useEffect } from "react";
-
-const CHECKOUT_URL = "https://pay.hotmart.com/M102774668D?off=3cj9etar&checkoutMode=10";
+import { useCheckoutUrl } from "@/hooks/use-checkout-url";
 
 const StickyFooter = () => {
+  const { checkoutUrl } = useCheckoutUrl();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -45,8 +45,8 @@ const StickyFooter = () => {
             size="lg"
             className="w-full md:w-auto bg-gradient-gold hover:opacity-90 text-primary-foreground font-bold shadow-gold"
           >
-            <a 
-              href={CHECKOUT_URL} 
+<a 
+              href={checkoutUrl} 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Quero garantir meu acesso por R$27,90"
