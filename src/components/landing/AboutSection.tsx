@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { BookOpen, Award, Heart } from "lucide-react";
-import authorPhoto from "@/assets/author-photo.jpg";
+import authorPhoto from "@/assets/author-photo-new.jpg";
 
 const AboutSection = () => {
   return (
