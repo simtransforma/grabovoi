@@ -12,7 +12,7 @@ const faqItems = [
   },
   {
     question: "Serve para iniciantes?",
-    answer: "Sim. O guia e as videoaulas mostram como escolher e aplicar de forma simples. Se você nunca usou códigos de Grabovoi, vai aprender desde o começo.",
+    answer: "Sim. O guia e o vídeo explicativo mostram como escolher e aplicar de forma simples. Se você nunca usou códigos de Grabovoi, vai aprender desde o começo.",
   },
   {
     question: "Em quanto tempo vejo resultados?",
@@ -25,6 +25,10 @@ const faqItems = [
   {
     question: "Isso substitui tratamento médico/terapia?",
     answer: "Não. É um material de desenvolvimento pessoal/espiritual e não substitui acompanhamento profissional. Não interrompa tratamentos.",
+  },
+  {
+    question: "Se eu tiver dúvida, como funciona o suporte?",
+    answer: "Você terá acesso ao nosso suporte para dúvidas. Os canais e horários são informados após a compra.",
   },
   {
     question: "Por quanto tempo é a promoção?",

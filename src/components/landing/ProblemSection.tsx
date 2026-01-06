@@ -39,7 +39,7 @@ const ProblemSection = () => {
                 <li>• Um método simples e guiado (sem “achismo”)</li>
                 <li>• Direção para escolher o código certo para cada objetivo</li>
                 <li>• Rotina de poucos minutos por dia (7/14/21 dias)</li>
-                <li>• Acompanhamento para tirar dúvidas e manter constância</li>
+                <li>• Suporte para tirar dúvidas e manter constância</li>
               </ul>
             </div>
           </div>

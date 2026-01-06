@@ -4,7 +4,7 @@ const forYou = [
   "quer uma prática simples e aplicável (sem complicar)",
   "quer melhorar energia, foco, clareza e constância",
   "quer trabalhar prosperidade, relações e bem‑estar com método",
-  "quer aprender com vídeo e ter apoio de mentor",
+  "quer aprender com um vídeo completo e explicativo e ter suporte para dúvidas",
 ];
 
 const notForYou = [

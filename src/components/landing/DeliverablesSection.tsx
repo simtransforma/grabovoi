@@ -23,18 +23,17 @@ const categories = [
 ];
 
 const videoFeatures = [
-  "como escolher o código certo",
-  "como aplicar no dia a dia (sem complicação)",
-  "como montar sua rotina de 7/14/21 dias",
-  "como registrar resultados e ajustar",
-  "como não se sabotar com ansiedade e desistir no meio",
+  "Como escolher o código certo",
+  "Como aplicar no dia a dia (sem complicação)",
+  "Como montar uma rotina simples (7/14/21 dias)",
+  "Como registrar e ajustar com consistência",
 ];
 
-const mentorFeatures = [
-  "tirar dúvidas que surgirem;",
-  "corrigir aplicação (quando necessário);",
-  "orientar sua rotina;",
-  "ajudar você a manter constância.",
+const supportFeatures = [
+  "Tirar dúvidas que surgirem",
+  "Ganhar clareza na escolha do código para o seu objetivo",
+  "Entender a melhor forma de aplicação para o seu dia a dia",
+  "Seguir com mais consistência sem se perder no processo",
 ];
 
 const DeliverablesSection = () => {
@@ -82,7 +81,7 @@ const DeliverablesSection = () => {
             </CardContent>
           </Card>
 
-          {/* 2) Caixa de Ferramentas */}
+          {/* 2) Guia Prático */}
           <Card className="mb-8 bg-card/80 backdrop-blur-md border-border/50">
             <CardHeader>
               <div className="flex items-center gap-4">
@@ -90,7 +89,7 @@ const DeliverablesSection = () => {
                   <Wrench className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle className="font-playfair text-xl">
-                  2) Uma "Caixa de Ferramentas" para usar todos os dias
+                  2) Guia Prático (PDF) – consulta rápida para usar todos os dias
                 </CardTitle>
               </div>
             </CardHeader>
@@ -99,15 +98,15 @@ const DeliverablesSection = () => {
                 Sabe quando você quer começar, mas não sabe por onde?
               </p>
               <p className="text-foreground/90 mb-4">
-                A caixa de ferramentas te dá um caminho: códigos "base" para você usar como rotina, especialmente no início.
+                O Guia Prático te dá um caminho simples: você abre, encontra a categoria certa e aplica em poucos minutos — ideal para manter constância sem complicar.
               </p>
               <p className="text-primary font-medium">
-                É o tipo de coisa que tira você do zero e coloca você em movimento.
+                É o tipo de material que facilita o começo e transforma intenção em rotina.
               </p>
             </CardContent>
           </Card>
 
-          {/* 3) Plataforma com Videoaulas */}
+          {/* 3) Plataforma com Vídeo Explicativo */}
           <Card className="mb-8 bg-card/80 backdrop-blur-md border-border/50">
             <CardHeader>
               <div className="flex items-center gap-4">
@@ -115,17 +114,13 @@ const DeliverablesSection = () => {
                   <Video className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle className="font-playfair text-xl">
-                  3) Acesso a uma Plataforma Exclusiva com Videoaulas (passo a passo)
+                  3) Plataforma Exclusiva com 1 Vídeo Completo e Explicativo (passo a passo)
                 </CardTitle>
               </div>
             </CardHeader>
             <CardContent>
               <p className="text-foreground/90 mb-4">
-                Aqui está o que a maioria dos materiais <span className="font-semibold">NÃO tem</span> — e que muda tudo:
-              </p>
-              <p className="text-foreground/85 mb-4">
-                Em vez de você ficar lendo e pensando "tá, mas como eu aplico isso na prática?"…
-                você entra na plataforma e assiste às aulas mostrando:
+                Aqui está o que muda o jogo para quem não quer ficar no "tá, mas como eu aplico isso na prática?"
               </p>
               <ul className="space-y-2 mb-4">
                 {videoFeatures.map((feature, index) => (
@@ -136,12 +131,12 @@ const DeliverablesSection = () => {
                 ))}
               </ul>
               <p className="text-primary font-medium">
-                Ou seja: você tem o caminho guiado, em vídeo.
+                Ou seja: você tem o caminho guiado em um único vídeo, direto ao ponto.
               </p>
             </CardContent>
           </Card>
 
-          {/* 4) Mentoria Online */}
+          {/* 4) Suporte para Dúvidas */}
           <Card className="bg-card/80 backdrop-blur-md border-primary/30">
             <CardHeader>
               <div className="flex items-center gap-4">
@@ -149,19 +144,16 @@ const DeliverablesSection = () => {
                   <Users className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle className="font-playfair text-xl">
-                  4) Mentoria Online + Acompanhamento (pra você não travar)
+                  4) Suporte para Dúvidas (pra você não travar)
                 </CardTitle>
               </div>
             </CardHeader>
             <CardContent>
               <p className="text-foreground/90 mb-4 font-semibold">
-                Você não vai ficar sozinha(o).
-              </p>
-              <p className="text-foreground/85 mb-4">
-                Na plataforma, você terá acesso a um mentor online para:
+                Se surgir qualquer dúvida durante a aplicação, você tem suporte para te orientar.
               </p>
               <ul className="space-y-2 mb-4">
-                {mentorFeatures.map((feature, index) => (
+                {supportFeatures.map((feature, index) => (
                   <li key={index} className="flex items-start gap-2">
                     <Check className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
                     <span className="text-foreground/85">{feature}</span>
@@ -169,7 +161,7 @@ const DeliverablesSection = () => {
                 ))}
               </ul>
               <p className="text-primary font-medium">
-                Isso é o que transforma um "PDF parado" em uma experiência acompanhada.
+                Isso evita travas e acelera sua aplicação com mais segurança.
               </p>
             </CardContent>
           </Card>

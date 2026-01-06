@@ -7,7 +7,7 @@ const microcopy = [
   "Acesso imediato",
   "Compra segura",
   "Conteúdo digital",
-  "Suporte + mentoria na plataforma",
+  "Suporte",
 ];
 
 const FinalOfferSection = () => {
