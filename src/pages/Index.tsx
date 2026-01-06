@@ -5,6 +5,7 @@ import PresentingSection from "@/components/landing/PresentingSection";
 import DeliverablesSection from "@/components/landing/DeliverablesSection";
 import ValueSection from "@/components/landing/ValueSection";
 import ForWhoSection from "@/components/landing/ForWhoSection";
+import AboutSection from "@/components/landing/AboutSection";
 import FAQSection from "@/components/landing/FAQSection";
 import FinalOfferSection from "@/components/landing/FinalOfferSection";
 import Footer from "@/components/landing/Footer";
@@ -21,6 +22,7 @@ const Index = () => {
         <DeliverablesSection />
         <ValueSection />
         <ForWhoSection />
+        <AboutSection />
         <FAQSection />
         <FinalOfferSection />
       </main>
