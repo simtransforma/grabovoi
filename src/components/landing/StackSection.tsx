@@ -43,7 +43,7 @@ const StackSection = () => {
               <div className="text-center">
                 <p className="text-muted-foreground line-through">De R$591+</p>
                 <p className="text-3xl md:text-4xl font-bold text-primary">
-                  Hoje, por tempo limitado: R$67
+                  Hoje, por tempo limitado: R$27,90
                 </p>
               </div>
               
@@ -56,9 +56,10 @@ const StackSection = () => {
                   href={CHECKOUT_URL} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  aria-label="Quero garantir meu acesso por R$67"
+                  aria-label="Quero garantir meu acesso por R$27,90"
                 >
-                  QUERO GARANTIR MEU ACESSO POR R$67
+                  <span className="hidden md:inline">QUERO GARANTIR MEU ACESSO POR R$27,90</span>
+                  <span className="md:hidden">GARANTIR ACESSO</span>
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>

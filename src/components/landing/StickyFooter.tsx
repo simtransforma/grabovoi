@@ -49,9 +49,9 @@ const StickyFooter = () => {
               href={CHECKOUT_URL} 
               target="_blank" 
               rel="noopener noreferrer"
-              aria-label="Quero garantir meu acesso por R$67"
+              aria-label="Quero garantir meu acesso por R$27,90"
             >
-              <span className="hidden md:inline">QUERO GARANTIR MEU ACESSO POR R$67</span>
+              <span className="hidden md:inline">QUERO GARANTIR MEU ACESSO POR R$27,90</span>
               <span className="md:hidden">GARANTIR ACESSO</span>
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
