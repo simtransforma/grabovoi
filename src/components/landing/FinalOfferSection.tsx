@@ -30,7 +30,7 @@ const FinalOfferSection = () => {
               <p className="text-lg text-muted-foreground">
                 🎁 De <span className="line-through">R$197</span> por
               </p>
-              <p className="text-5xl md:text-6xl font-bold text-primary mt-2">R$67</p>
+              <p className="text-5xl md:text-6xl font-bold text-primary mt-2">R$27,90</p>
             </div>
 
             <p className="text-foreground/80 mb-8">
@@ -46,9 +46,9 @@ const FinalOfferSection = () => {
                 href={CHECKOUT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Garantir R$67 e começar agora"
+                aria-label="Garantir R$27,90 e começar agora"
               >
-                <span className="hidden md:inline">GARANTIR R$67 E COMEÇAR AGORA</span>
+                <span className="hidden md:inline">GARANTIR R$27,90 E COMEÇAR AGORA</span>
                 <span className="md:hidden">GARANTIR ACESSO</span>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>

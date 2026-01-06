@@ -8,7 +8,7 @@ const PriceSection = () => {
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
             Por que hoje está{" "}
-            <span className="text-gradient-gold">R$67</span>{" "}
+            <span className="text-gradient-gold">R$27,90</span>{" "}
             (e depois volta para R$197)?
           </h2>
           
@@ -38,7 +38,7 @@ const PriceSection = () => {
                 </div>
                 <div className="text-left">
                   <p className="text-sm text-primary font-medium">Preço promocional</p>
-                  <p className="text-3xl font-bold text-primary">R$67</p>
+                  <p className="text-3xl font-bold text-primary">R$27,90</p>
                 </div>
               </div>
             </div>
