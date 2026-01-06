@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Gift, ArrowRight, Check } from "lucide-react";
-
-const CHECKOUT_URL = "https://pay.hotmart.com/M102774668D?off=3cj9etar&checkoutMode=10";
+import { useCheckoutUrl } from "@/hooks/use-checkout-url";
 
 const microcopy = [
   "Acesso imediato",
@@ -12,6 +11,7 @@ const microcopy = [
 ];
 
 const FinalOfferSection = () => {
+  const { checkoutUrl } = useCheckoutUrl();
   return (
     <section className="py-16 md:py-24">
       <div className="container">
@@ -42,8 +42,8 @@ const FinalOfferSection = () => {
               size="lg"
               className="w-full bg-gradient-gold hover:opacity-90 text-primary-foreground font-bold text-lg py-6 shadow-gold"
             >
-              <a
-                href={CHECKOUT_URL}
+<a
+                href={checkoutUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Garantir R$27,90 e começar agora"
