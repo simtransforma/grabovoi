@@ -16,8 +16,12 @@ const steps = [{
 const WhatAreGrabovoiSection = () => {
   return <section className="pt-0 pb-16 md:pb-24">
       {/* Imagem de transição - conecta com a seção anterior */}
-      <div className="w-full flex justify-center mb-12 md:mb-16">
-        
+      <div className="w-full flex justify-center -mt-8 md:-mt-12 mb-6 md:mb-8">
+        <img 
+          src={heroTransition} 
+          alt="Edson Burger - Guia de Códigos de Grabovoi"
+          className="w-full max-w-4xl h-auto"
+        />
       </div>
       
       <div className="container">
