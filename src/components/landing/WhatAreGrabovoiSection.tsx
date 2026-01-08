@@ -21,6 +21,7 @@ const WhatAreGrabovoiSection = () => {
           src={heroTransition} 
           alt="Edson Burger - Guia de Códigos de Grabovoi"
           className="w-full max-w-4xl h-auto"
+          loading="lazy"
         />
       </div>
       

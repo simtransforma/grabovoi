@@ -22,6 +22,7 @@ const AboutSection = () => {
                     src={authorPhoto} 
                     alt="Edson Burger - Autor do Guia de Códigos de Grabovoi"
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>
