@@ -8,7 +8,29 @@ const UTM_PARAMS = [
   "utm_term",
 ] as const;
 
+export type UtmParams = {
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_content?: string;
+  utm_term?: string;
+};
+
 export function useCheckoutUrl() {
+  const getUtmParams = (): UtmParams => {
+    if (typeof window === "undefined") return {};
+
+    const currentParams = new URLSearchParams(window.location.search);
+    const utmParams: UtmParams = {};
+
+    UTM_PARAMS.forEach((key) => {
+      const value = currentParams.get(key);
+      if (value) utmParams[key] = value;
+    });
+
+    return utmParams;
+  };
+
   const getCheckoutUrl = () => {
     if (typeof window === "undefined") return BASE_CHECKOUT_URL;
 
@@ -24,5 +46,8 @@ export function useCheckoutUrl() {
     return queryString ? `${BASE_CHECKOUT_URL}?${queryString}` : BASE_CHECKOUT_URL;
   };
 
-  return { checkoutUrl: getCheckoutUrl() };
+  return { 
+    checkoutUrl: getCheckoutUrl(),
+    utmParams: getUtmParams(),
+  };
 }

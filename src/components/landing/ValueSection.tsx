@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
-import { useCheckoutUrl } from "@/hooks/use-checkout-url";
+import { useLeadCapture } from "@/contexts/LeadCaptureContext";
 
 const benefits = [
   "um método organizado por áreas da vida,",
@@ -17,7 +17,8 @@ const stackItems = [
 ];
 
 const ValueSection = () => {
-  const { checkoutUrl } = useCheckoutUrl();
+  const { openLeadCapture } = useLeadCapture();
+  
   return (
     <section className="py-16 md:py-24">
       <div className="container">
@@ -79,20 +80,13 @@ const ValueSection = () => {
               </p>
 
               <Button
-                asChild
                 size="lg"
                 className="w-full bg-gradient-gold hover:opacity-90 text-primary-foreground font-bold text-lg py-6 shadow-gold"
+                onClick={openLeadCapture}
               >
-<a
-                  href={checkoutUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Sim — quero entrar agora por R$27,90"
-                >
-                  <span className="hidden md:inline">SIM — QUERO ENTRAR AGORA POR R$27,90</span>
-                  <span className="md:hidden">GARANTIR ACESSO</span>
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+                <span className="hidden md:inline">SIM — QUERO ENTRAR AGORA POR R$27,90</span>
+                <span className="md:hidden">GARANTIR ACESSO</span>
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
           </Card>

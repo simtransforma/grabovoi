@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock } from "lucide-react";
 import { useState, useEffect } from "react";
-import { useCheckoutUrl } from "@/hooks/use-checkout-url";
+import { useLeadCapture } from "@/contexts/LeadCaptureContext";
 
 const StickyFooter = () => {
-  const { checkoutUrl } = useCheckoutUrl();
+  const { openLeadCapture } = useLeadCapture();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -41,20 +41,13 @@ const StickyFooter = () => {
           
           {/* CTA Button */}
           <Button 
-            asChild
             size="lg"
             className="w-full md:w-auto bg-gradient-gold hover:opacity-90 text-primary-foreground font-bold shadow-gold"
+            onClick={openLeadCapture}
           >
-<a 
-              href={checkoutUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label="Quero garantir meu acesso por R$27,90"
-            >
-              <span className="hidden md:inline">QUERO GARANTIR MEU ACESSO POR R$27,90</span>
-              <span className="md:hidden">GARANTIR ACESSO</span>
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+            <span className="hidden md:inline">QUERO GARANTIR MEU ACESSO POR R$27,90</span>
+            <span className="md:hidden">GARANTIR ACESSO</span>
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </div>

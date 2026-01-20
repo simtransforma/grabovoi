@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Lock } from "lucide-react";
-import heroBanner from "@/assets/hero-banner.png";
-import { useCheckoutUrl } from "@/hooks/use-checkout-url";
+import { useLeadCapture } from "@/contexts/LeadCaptureContext";
+
 const HeroSection = () => {
-  const { checkoutUrl } = useCheckoutUrl();
-  return <header className="relative">
+  const { openLeadCapture } = useLeadCapture();
+  
+  return (
+    <header className="relative">
       {/* Hero banner - transparent PNG over galaxy background */}
       <div className="w-full flex justify-center -mb-8 md:-mb-16">
         
@@ -55,12 +57,15 @@ const HeroSection = () => {
           </div>
 
           <div className="mt-8 flex justify-center">
-            <Button asChild size="lg" className="bg-gradient-gold hover:opacity-90 text-primary-foreground font-bold shadow-gold">
-              <a id="hero-cta" href={checkoutUrl} target="_blank" rel="noopener noreferrer" aria-label="Quero garantir meu acesso por R$27,90 agora">
-                <span className="hidden md:inline">QUERO GARANTIR MEU ACESSO POR R$27,90 AGORA</span>
-                <span className="md:hidden">GARANTIR ACESSO</span>
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+            <Button 
+              id="hero-cta"
+              size="lg" 
+              className="bg-gradient-gold hover:opacity-90 text-primary-foreground font-bold shadow-gold"
+              onClick={openLeadCapture}
+            >
+              <span className="hidden md:inline">QUERO GARANTIR MEU ACESSO POR R$27,90 AGORA</span>
+              <span className="md:hidden">GARANTIR ACESSO</span>
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
 
@@ -69,6 +74,8 @@ const HeroSection = () => {
           </p>
         </div>
       </div>
-    </header>;
+    </header>
+  );
 };
+
 export default HeroSection;

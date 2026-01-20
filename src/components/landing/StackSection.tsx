@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
-import { useCheckoutUrl } from "@/hooks/use-checkout-url";
+import { useLeadCapture } from "@/contexts/LeadCaptureContext";
 
 const stackItems = [
   { item: 'Guia completo em PDF', value: "R$197" },
@@ -10,7 +10,8 @@ const stackItems = [
 ];
 
 const StackSection = () => {
-  const { checkoutUrl } = useCheckoutUrl();
+  const { openLeadCapture } = useLeadCapture();
+  
   return (
     <section className="py-16 md:py-24">
       <div className="container">
@@ -48,20 +49,13 @@ const StackSection = () => {
               </div>
               
               <Button 
-                asChild
                 size="lg"
                 className="w-full bg-gradient-gold hover:opacity-90 text-primary-foreground font-bold text-lg py-6 shadow-gold animate-pulse-gold"
+                onClick={openLeadCapture}
               >
-<a 
-                  href={checkoutUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  aria-label="Quero garantir meu acesso por R$27,90"
-                >
-                  <span className="hidden md:inline">QUERO GARANTIR MEU ACESSO POR R$27,90</span>
-                  <span className="md:hidden">GARANTIR ACESSO</span>
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+                <span className="hidden md:inline">QUERO GARANTIR MEU ACESSO POR R$27,90</span>
+                <span className="md:hidden">GARANTIR ACESSO</span>
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               
               <p className="text-center text-sm text-muted-foreground">
