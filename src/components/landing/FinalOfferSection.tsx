@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Gift, ArrowRight, Check } from "lucide-react";
-import { useCheckoutUrl } from "@/hooks/use-checkout-url";
+import { useLeadCapture } from "@/contexts/LeadCaptureContext";
 
 const microcopy = [
   "Acesso imediato",
@@ -11,7 +11,8 @@ const microcopy = [
 ];
 
 const FinalOfferSection = () => {
-  const { checkoutUrl } = useCheckoutUrl();
+  const { openLeadCapture } = useLeadCapture();
+  
   return (
     <section className="py-16 md:py-24">
       <div className="container">
@@ -38,20 +39,13 @@ const FinalOfferSection = () => {
             </p>
 
             <Button
-              asChild
               size="lg"
               className="w-full bg-gradient-gold hover:opacity-90 text-primary-foreground font-bold text-lg py-6 shadow-gold"
+              onClick={openLeadCapture}
             >
-<a
-                href={checkoutUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Garantir R$27,90 e começar agora"
-              >
-                <span className="hidden md:inline">GARANTIR R$27,90 E COMEÇAR AGORA</span>
-                <span className="md:hidden">GARANTIR ACESSO</span>
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+              <span className="hidden md:inline">GARANTIR R$27,90 E COMEÇAR AGORA</span>
+              <span className="md:hidden">GARANTIR ACESSO</span>
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
