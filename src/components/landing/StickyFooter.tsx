@@ -45,7 +45,7 @@ const StickyFooter = () => {
             className="w-full md:w-auto bg-gradient-gold hover:opacity-90 text-primary-foreground font-bold shadow-gold"
             onClick={openLeadCapture}
           >
-            <span className="hidden md:inline">QUERO GARANTIR MEU ACESSO POR R$27,90</span>
+            <span className="hidden md:inline">QUERO GARANTIR MEU ACESSO POR R$19,90</span>
             <span className="md:hidden">GARANTIR ACESSO</span>
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>

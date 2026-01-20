@@ -44,7 +44,7 @@ const StackSection = () => {
               <div className="text-center">
                 <p className="text-muted-foreground line-through">De R$591+</p>
                 <p className="text-3xl md:text-4xl font-bold text-primary">
-                  Hoje, por tempo limitado: R$27,90
+                  Hoje, por tempo limitado: R$19,90
                 </p>
               </div>
               
@@ -53,7 +53,7 @@ const StackSection = () => {
                 className="w-full bg-gradient-gold hover:opacity-90 text-primary-foreground font-bold text-lg py-6 shadow-gold animate-pulse-gold"
                 onClick={openLeadCapture}
               >
-                <span className="hidden md:inline">QUERO GARANTIR MEU ACESSO POR R$27,90</span>
+                <span className="hidden md:inline">QUERO GARANTIR MEU ACESSO POR R$19,90</span>
                 <span className="md:hidden">GARANTIR ACESSO</span>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>

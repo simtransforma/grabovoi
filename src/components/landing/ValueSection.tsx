@@ -26,7 +26,7 @@ const ValueSection = () => {
           <div className="text-center mb-10">
             <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
               Por que isso vale muito mais do que{" "}
-              <span className="text-gradient-gold">R$27,90</span>?
+              <span className="text-gradient-gold">R$19,90</span>?
             </h2>
             <p className="text-lg text-foreground/90 leading-relaxed">
               Porque você não está comprando um "arquivo".
@@ -73,7 +73,7 @@ const ValueSection = () => {
               <p className="text-foreground/80">Mas por tempo limitado, pra abrir o ano com tudo:</p>
               <div>
                 <p className="text-sm text-primary">✅ Hoje:</p>
-                <p className="text-4xl font-bold text-primary">R$27,90</p>
+                <p className="text-4xl font-bold text-primary">R$19,90</p>
               </div>
               <p className="text-sm text-muted-foreground">
                 🔁 Depois: volta para R$197
@@ -84,7 +84,7 @@ const ValueSection = () => {
                 className="w-full bg-gradient-gold hover:opacity-90 text-primary-foreground font-bold text-lg py-6 shadow-gold"
                 onClick={openLeadCapture}
               >
-                <span className="hidden md:inline">SIM — QUERO ENTRAR AGORA POR R$27,90</span>
+                <span className="hidden md:inline">SIM — QUERO ENTRAR AGORA POR R$19,90</span>
                 <span className="md:hidden">GARANTIR ACESSO</span>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
