@@ -93,11 +93,23 @@ const LeadCaptureDialog = () => {
     };
 
     try {
+      // Send as form-urlencoded so n8n shows each field separately
+      const formData = new URLSearchParams();
+      formData.append("name", payload.name);
+      formData.append("email", payload.email);
+      formData.append("phone", payload.phone);
+      formData.append("utm_source", payload.utm_source);
+      formData.append("utm_medium", payload.utm_medium);
+      formData.append("utm_campaign", payload.utm_campaign);
+      formData.append("utm_content", payload.utm_content);
+      formData.append("utm_term", payload.utm_term);
+      formData.append("timestamp", payload.timestamp);
+
       await fetch(WEBHOOK_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-        mode: "no-cors", // Webhook may not have CORS enabled
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData.toString(),
+        mode: "no-cors",
       });
     } catch (error) {
       // Even if webhook fails, redirect to checkout
