@@ -12,6 +12,12 @@ import { useLeadCapture } from "@/contexts/LeadCaptureContext";
 import { useCheckoutUrl } from "@/hooks/use-checkout-url";
 import { Gift, Lock, ArrowRight, Loader2 } from "lucide-react";
 
+declare global {
+  interface Window {
+    dataLayer: Record<string, unknown>[];
+  }
+}
+
 const WEBHOOK_URL = "https://n8n.edsonburgersim.com/webhook/d6f2e4ab-f2e9-4c9f-b995-54d08064bb05";
 
 // Format phone as (XX) XXXXX-XXXX or (XX) XXXX-XXXX
@@ -115,6 +121,21 @@ const LeadCaptureDialog = () => {
       // Even if webhook fails, redirect to checkout
       console.error("Webhook error:", error);
     }
+
+    // Disparar evento GTM
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'Grabovoi Lead',
+      'eventCategory': 'Form',
+      'eventAction': 'Submit',
+      'eventLabel': 'Lead Capture Form',
+      'formId': 'LeadCaptureDialog',
+      'userData': {
+        'name': payload.name,
+        'email': payload.email,
+        'phone': payload.phone,
+      }
+    });
 
     // Redirect to checkout
     window.open(checkoutUrl, "_blank");
