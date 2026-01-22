@@ -1,4 +1,4 @@
-const BASE_CHECKOUT_URL = "https://chk.eduzz.com/4aoj6zw4";
+const BASE_CHECKOUT_URL = "https://chk.eduzz.com/8WPA8A5YWP";
 
 const UTM_PARAMS = [
   "utm_source",
