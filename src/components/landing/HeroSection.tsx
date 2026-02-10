@@ -29,8 +29,11 @@ const HeroSection = () => {
           </h1>
 
           {/* Vturb Video Player */}
-          <div className="max-w-3xl mx-auto my-8">
-            <div dangerouslySetInnerHTML={{ __html: '<vturb-smartplayer id="vid-698b3f656e05f1df885c18c1" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>' }} />
+          <div className="max-w-3xl mx-auto my-8 relative group">
+            <div className="absolute -inset-[2px] rounded-xl bg-gradient-to-r from-primary via-primary/50 to-primary opacity-75 blur-sm group-hover:opacity-100 group-hover:blur-md transition-all duration-500 animate-pulse" />
+            <div className="relative rounded-xl overflow-hidden border border-primary/30 bg-background/50 backdrop-blur-sm">
+              <div dangerouslySetInnerHTML={{ __html: '<vturb-smartplayer id="vid-698b3f656e05f1df885c18c1" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>' }} />
+            </div>
           </div>
 
           <p className="mt-5 text-base md:text-lg text-foreground/85 leading-relaxed">
